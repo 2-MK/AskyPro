@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#000;
+
+    color:#00ff41;
+
+    font-family:Consolas,monospace;
+
+    overflow:hidden;
+}
+
+
+/* CRT SCANLINES */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+
+    repeating-linear-gradient(
+
+        transparent 0px,
+
+        rgba(0,255,65,0.03) 1px,
+
+        transparent 3px
+
+    );
+
+    pointer-events:none;
+
+    z-index:1000;
+}
+
+
+/* MATRIX RAIN BACKGROUND */
+#matrix-bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    z-index:0;
+
+    opacity:1;
+
+    pointer-events:none;
+}
+.container{
+
+    position:relative;
+
+    z-index:1;
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:20px;
+}
+
+
+/* MAIN LAYOUT */
+
+.container{
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:20px;
+}
+
+
+.header{
+
+    z-index:10;
+
+    text-align:center;
+
+    margin-bottom:20px;
+}
+
+
+/* TITLE */
+
+h1{
+
+    font-size:60px;
+
+    letter-spacing:15px;
+
+    color:#00ff41;
+
+    text-shadow:
+
+        0 0 10px #00ff41,
+        0 0 20px #00ff41,
+        0 0 40px #00ff41,
+        0 0 80px #00ff41;
+
+    margin-bottom:20px;
+}
+
+
+/* BUTTONS */
+
+button{
+
+    padding:15px 40px;
+
+    background:rgba(0,0,0,0.4);
+
+    border:2px solid #00ff41;
+
+    color:#00ff41;
+
+    border-radius:12px;
+
+    font-size:24px;
+
+    font-family:Consolas,monospace;
+
+    cursor:pointer;
+
+    margin-bottom:20px;
+
+    transition:0.3s;
+
+    box-shadow:
+
+        0 0 10px #00ff41;
+}
+
+
+button:hover{
+
+    background:#00ff41;
+
+    color:black;
+
+    box-shadow:
+
+        0 0 20px #00ff41,
+        0 0 40px #00ff41;
+}
+
+
+/* STATUS BAR */
+
+.status{
+
+    letter-spacing:6px;
+
+    font-size:18px;
+
+    color:#00ff41;
+
+    text-shadow:
+
+        0 0 10px #00ff41;
+
+    margin-bottom:20px;
+}
+
+
+/* HIDE REAL CAMERA */
+
+video,
+canvas{
+
+    display:none;
+}
+
+
+/* ASCII SCREEN */
+pre{
+
+    flex:1;
+
+    width:95vw;
+
+    background:rgba(0,0,0,0.25);
+
+    border:2px solid #00ff41;
+
+    border-radius:25px;
+
+    padding:20px;
+
+    overflow:hidden;
+
+    color:#00ff41;
+
+    text-shadow:
+        0 0 4px #00ff41,
+        0 0 8px #00ff41;
+
+    font-size:6px;
+
+    line-height:6px;
+
+    white-space:pre;
+
+    text-align:center;
+
+    box-shadow:
+        0 0 20px #00ff41,
+        0 0 40px rgba(0,255,65,0.4);
+}
